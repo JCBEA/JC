@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "secondsem-fd19a": {
+      "hosting": {
+        "Second_sem": [
+          "secondsem-fd19a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "secondsem-fd19a"
+  }
+}
