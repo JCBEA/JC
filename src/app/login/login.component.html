@@ -1,7 +1,7 @@
-
-
+<div>
 <form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
-<input type="text" name="">
-<input type="password" name="">
-<button>Login</button>
+<input type="text" ngModel id="username"  name="username"><br>
+<input type="passowrd" ngModel id="password" name="password"><br>
+<input class="button" type="submit" id="saveData" name="Submit" value="get user data"/>
 </form>
+</div>

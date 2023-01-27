@@ -1,0 +1,16 @@
+div{
+    min-width: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+  
+}
+form{
+    display: block;
+    margin-left:45%;
+    margin-top: 20%;
+
+    
+}
+.button{
+    margin-left: 4%;
+}
