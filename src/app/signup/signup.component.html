@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,12 @@
         <div class="row">
             <div class="colm-form">
                 <div class="form-container">
-                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                    <form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
                     <input type="text" ngModel id="username"  name="username">
                     <input type="password" ngModel id="password" name="password">
-                    <input class="btn-login" type="submit" id="saveData" name="Submit" value="Login"/>
+                    <input class="btn-new" type="submit" id="saveData" name="Submit" value="Create new Account"/>
                     <a href="#">Forgotten password?</a>
-                    <button class="btn-new" routerLink="/Signup">Create new Account</button>
+                    <button class="btn-login" routerLink="/Login">Login</button>
                 </form>
                 </div>
             </div>

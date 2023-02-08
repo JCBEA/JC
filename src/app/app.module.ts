@@ -8,19 +8,28 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SignupComponent } from './signup/signup.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    SignupComponent,
+    NavbarComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment. firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase())

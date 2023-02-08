@@ -13,19 +13,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  registerUser(value: any){
-  // set(ref(this.database, 'users/' + value.username), {
-   //  username: value.username,
-   //  password: value.password
-  //  }); 
-   //alert('user created!');
-
+  login(value: any){
 
     const starCountRef = ref(this.database, 'users/' + value.username);
    onValue(starCountRef, (snapshot) => {
     const data = snapshot.val();  
 
-    if (data.password == value.password ){
+    if (data.password == value.password){
     this.route.navigate(['/Home'])
     }else{
      alert('Wrong Username or Password');
