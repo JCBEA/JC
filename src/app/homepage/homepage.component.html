@@ -12,45 +12,19 @@
 </div>
 <br>
 <div class="body" >
-    <div *ngIf= "userList"  class="cards-list over">
-        <div *ngFor = "let i of rowIndexArray">
-            <div *ngIf= "userList[3*i]">
+    <div   class="cards-list over">
+        <div *ngFor="let peps of users | async">
+            <div *ngIf= "peps">
                 <div class="card 1">
                     <div class="card_title title-white">
-                      <p class="p-title">Username: {{userList[3*i].username}}</p>  
-                      <p>Password: {{userList[3*i].password}}</p>
-                      <button (click)="del(userList[3*i].username)">Delete</button>
-                      <button (click)="fillForm(userList[3*i].username)">update</button>
+                      <p class="p-title">Username: {{peps.username}}</p>  
+                      <p>Password: {{peps.password}}</p>
+                      <button (click)="del(peps.username)">Delete</button>
+                      <button (click)="fillForm(peps.username)">update</button>
                     </div>
                   </div>
                 </div>
-            <div *ngIf= "userList[3*i+1]" class="t">
-                <div>
-                    <div class="card 1">
-                       
-                        <div class="card_title title-white">
-                          <p class="p-title">Username: {{userList[3*i+1].username}}</p>
-                          <p>Password: {{userList[3*i+1].password}}</p>
-                          <button (click)="del(userList[3*i+1].username)">Delete</button>
-                          <button (click)="fillForm(userList[3*i+1].username)">update</button>
-                         
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div *ngIf= "userList[3*i+2]" class="t">
-                <div>
-                    <div class="card 1">
-                        <div class="card_title title-white">
-                          <p>Username: {{userList[3*i+2].username}}</p>
-                          <p class="p-title">Password: {{userList[3*i+2].password}}</p>
-                          <button (click)="del(userList[3*i+2].username)">Delete</button>  
-                          <button (click)="fillForm(userList[3*i+2].username)">update</button> 
-                               
-                        </div>                     
-                      </div>
-                </div>
-            </div>
+
         </div>
     </div>
     </div>

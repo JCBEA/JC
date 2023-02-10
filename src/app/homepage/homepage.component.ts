@@ -3,6 +3,8 @@ import { AngularFireList, AngularFireDatabase } from '@angular/fire/compat/datab
 import { Database, ref, set, update, remove,query,orderByChild,equalTo} from '@angular/fire/database';
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/database'
+import { getDatabase, onValue} from "firebase/database";
+import { Observable } from 'rxjs';
 
 import Swal from 'sweetalert2';
 
@@ -17,24 +19,17 @@ interface Item {
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  userList: any = [];
-  rowIndexArray: any = [];
-  users!: AngularFireList<any>;
-  constructor(public database: Database, private db: AngularFireDatabase) { }
 
+  users!: Observable<any[]>;
+  constructor(public database: Database, private db: AngularFireDatabase) {
+    this.users = db.list('/users').valueChanges();
+   }
+   
   ngOnInit(): void {
-    this.db.list('users').snapshotChanges().subscribe(
-      list => {
-      this.userList = list.map(item => {return item.payload.val();});
-      this.rowIndexArray = Array.from(Array(Math.ceil(this.userList.length/3)).keys());
-      this.getUser();  
-      }
-    );
+
 
   }
-  getUser() {
-    this.users = this.db.list('users')
-  }
+
 
   del(value: any){
     remove(ref(this.database, 'users/' + value));
@@ -77,6 +72,10 @@ export class HomepageComponent implements OnInit {
       }); 
     });
   }
+
+ 
+
+
 
 
   }
