@@ -27,12 +27,12 @@ export class HomepageComponent implements OnInit {
       list => {
       this.userList = list.map(item => {return item.payload.val();});
       this.rowIndexArray = Array.from(Array(Math.ceil(this.userList.length/3)).keys());
-      this.getbookDetails();  
+      this.getUser();  
       }
     );
 
   }
-  getbookDetails() {
+  getUser() {
     this.users = this.db.list('users')
   }
 
@@ -49,6 +49,14 @@ export class HomepageComponent implements OnInit {
     alert('User updated!');
       
   }
+
+
+  username = '';
+  fillForm(username: any) {
+    this.username = username;
+  }
+
+
 
   password: any;
   itemId: any;

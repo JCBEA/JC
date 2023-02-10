@@ -5,7 +5,7 @@
 
   <h1>Enter username to change password</h1>
 <form #RegisterForm="ngForm" (ngSubmit)="update(RegisterForm.value)">
-  <input type="text" ngModel id="username" placeholder="Username you want to change the pass" name="username">
+  <input type="text" ngModel id="username" [(ngModel)]="username" placeholder="Username you want to change the pass" name="username">
   <input type="password" ngModel id="password" placeholder="New password" name="password">
   <input class="btn-new" type="submit" id="saveData" name="Submit" value="Update password"/>
 </form>
@@ -20,7 +20,7 @@
                       <p class="p-title">Username: {{userList[3*i].username}}</p>  
                       <p>Password: {{userList[3*i].password}}</p>
                       <button (click)="del(userList[3*i].username)">Delete</button>
-                      
+                      <button (click)="fillForm(userList[3*i].username)">update</button>
                     </div>
                   </div>
                 </div>
@@ -32,6 +32,7 @@
                           <p class="p-title">Username: {{userList[3*i+1].username}}</p>
                           <p>Password: {{userList[3*i+1].password}}</p>
                           <button (click)="del(userList[3*i+1].username)">Delete</button>
+                          <button (click)="fillForm(userList[3*i+1].username)">update</button>
                          
                         </div>
                       </div>
@@ -41,9 +42,10 @@
                 <div>
                     <div class="card 1">
                         <div class="card_title title-white">
-                          <p>Username: {{userList[3*i+2].password}}</p>
-                          <p class="p-title">Password: {{userList[3*i+2].username}}</p>
-                          <button (click)="del(userList[3*i+2].username)">Delete</button>   
+                          <p>Username: {{userList[3*i+2].username}}</p>
+                          <p class="p-title">Password: {{userList[3*i+2].password}}</p>
+                          <button (click)="del(userList[3*i+2].username)">Delete</button>  
+                          <button (click)="fillForm(userList[3*i+2].username)">update</button> 
                                
                         </div>                     
                       </div>
