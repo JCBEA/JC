@@ -11,7 +11,7 @@
 </form>
 </div>
 <br>
-<div class="body" >
+<div class="body">
     <div   class="cards-list over">
         <div *ngFor="let peps of users | async">
             <div *ngIf= "peps">
@@ -23,7 +23,7 @@
                       <button (click)="fillForm(peps.username)">update</button>
                     </div>
                   </div>
-                </div>
+                </div>  
 
         </div>
     </div>
