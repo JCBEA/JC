@@ -14,10 +14,14 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 registerUser(value:any){
+  if(value.username == '' && value.password== ''){
+    alert('Empty Username or Password');
+  }else {
 set(ref(this.database, 'users/' + value.username), {
     username: value.username,
      password: value.password
    }); 
-  alert('User created!');
+   alert('User created!');
+  }
 }
 }
