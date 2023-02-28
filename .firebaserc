@@ -6,9 +6,16 @@
           "secondsem-fd19a"
         ]
       }
+    },
+    "newsemsecond": {
+      "hosting": {
+        "Second_sem": [
+          "newsemsecond"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "secondsem-fd19a"
+    "default": "newsemsecond"
   }
 }
