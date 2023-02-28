@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   login(value: any){
 
     const starCountRef = ref(this.database, 'users/' + value.username);

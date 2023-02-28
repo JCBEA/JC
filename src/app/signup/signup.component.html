@@ -13,9 +13,9 @@
             <div class="colm-form">
                 <div class="form-container">
                     <form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
-                    <input type="text" ngModel id="username"  name="username">
-                    <input type="password" ngModel id="password" name="password">
-                    <input class="btn-new" type="submit" id="saveData" name="Submit" value="Create new Account"/>
+                    <input type="text" ngModel id="username"  name="username" required>
+                    <input type="password" ngModel id="password" name="password" required>
+                    <input class="btn-new" type="submit" id="saveData" name="Submit" [disabled]="RegisterForm.invalid" value="Create new Account"/>
                     <a href="#">Forgotten password?</a>
                     <button class="btn-login" routerLink="/Login">Login</button>
                 </form>

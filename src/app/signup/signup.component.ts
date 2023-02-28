@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 registerUser(value:any){
-  if(value.username == '' && value.password== ''){
+  if(value.username == null && value.password == null){
     alert('Empty Username or Password');
   }else {
 set(ref(this.database, 'users/' + value.username), {
