@@ -1,0 +1,276 @@
+[debug] [2023-02-28T09:49:29.623Z] ----------------------------------------------------------------------
+[debug] [2023-02-28T09:49:29.626Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-02-28T09:49:29.628Z] CLI Version:   11.24.0
+[debug] [2023-02-28T09:49:29.628Z] Platform:      win32
+[debug] [2023-02-28T09:49:29.628Z] Node Version:  v16.17.0
+[debug] [2023-02-28T09:49:29.630Z] Time:          Tue Feb 28 2023 17:49:29 GMT+0800 (Taipei Standard Time)
+[debug] [2023-02-28T09:49:29.630Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-28T09:49:29.740Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-28T09:49:29.741Z] > authorizing via signed-in user (jusrinbea@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Angular\Second_sem
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-02-28T09:49:50.145Z] Using project from CLI flag: newsemsecond
+[debug] [2023-02-28T09:49:50.150Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond [none]
+[debug] [2023-02-28T09:49:51.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond 200
+[debug] [2023-02-28T09:49:51.472Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond {"projectId":"newsemsecond","projectNumber":"537573845279","displayName":"NewSemSecond","name":"projects/newsemsecond","resources":{"hostingSite":"newsemsecond","realtimeDatabaseInstance":"newsemsecond-default-rtdb"},"state":"ACTIVE","etag":"1_1ed5a308-cf61-45d9-8a9a-f983237b83fb"}
+[info] i  Using project newsemsecond (NewSemSecond) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-02-28T09:49:51.487Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-02-28T09:49:51.487Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/newsemsecond
+[debug] [2023-02-28T09:49:53.311Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com 200
+[debug] [2023-02-28T09:49:53.311Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-02-28T09:49:53.314Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/newsemsecond/locations/-/instances/newsemsecond-default-rtdb [none]
+[debug] [2023-02-28T09:49:54.438Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/newsemsecond/locations/-/instances/newsemsecond-default-rtdb 200
+[debug] [2023-02-28T09:49:54.438Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/newsemsecond/locations/-/instances/newsemsecond-default-rtdb {"name":"projects/537573845279/locations/us-central1/instances/newsemsecond-default-rtdb","project":"projects/537573845279","databaseUrl":"https://newsemsecond-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-02-28T09:50:25.522Z] >>> [apiv2][query] GET https://newsemsecond-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2023-02-28T09:50:37.848Z] <<< [apiv2][status] GET https://newsemsecond-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-02-28T09:50:37.848Z] <<< [apiv2][body] GET https://newsemsecond-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for newsemsecond-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-02-28T09:50:44.770Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-02-28T09:50:56.306Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-02-28T09:50:56.306Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.17.1","browserURL":"https://www.gstatic.com/firebasejs/9.17.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.17.1/firebase.tgz"},"live":{"version":"9.17","browserURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.17.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.17.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.17.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.17.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.17.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Angular\Second_sem 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=291366329&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-02-28T09:51:41.995Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-02-28T09:51:41.996Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-02-28T09:51:42.972Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-02-28T09:51:42.972Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-02-28T09:51:43.009Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-02-28T09:51:43.952Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-02-28T09:51:43.952Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"JCBEA","id":111287289,"node_id":"U_kgDOBqIb-Q","avatar_url":"https://avatars.githubusercontent.com/u/111287289?v=4","gravatar_id":"","url":"https://api.github.com/users/JCBEA","html_url":"https://github.com/JCBEA","followers_url":"https://api.github.com/users/JCBEA/followers","following_url":"https://api.github.com/users/JCBEA/following{/other_user}","gists_url":"https://api.github.com/users/JCBEA/gists{/gist_id}","starred_url":"https://api.github.com/users/JCBEA/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/JCBEA/subscriptions","organizations_url":"https://api.github.com/users/JCBEA/orgs","repos_url":"https://api.github.com/users/JCBEA/repos","events_url":"https://api.github.com/users/JCBEA/events{/privacy}","received_events_url":"https://api.github.com/users/JCBEA/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":1,"following":0,"created_at":"2022-08-15T12:29:35Z","updated_at":"2023-01-27T10:25:45Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":415479,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as JCBEA 
+[info] 
+[debug] [2023-02-28T09:52:33.311Z] >>> [apiv2][query] GET https://api.github.com/repos/JCBEA/JC/actions/secrets/public-key type=owner
+[debug] [2023-02-28T09:52:45.091Z] <<< [apiv2][status] GET https://api.github.com/repos/JCBEA/JC/actions/secrets/public-key 200
+[debug] [2023-02-28T09:52:45.092Z] <<< [apiv2][body] GET https://api.github.com/repos/JCBEA/JC/actions/secrets/public-key {"key_id":"568250167242549743","key":"3raDRIJwHaaqRAaw+mKRMAA4rOewvbEXciMEO6eacDo="}
+[debug] [2023-02-28T09:52:45.095Z] >>> [apiv2][query] GET https://api.github.com/repos/JCBEA/JC [none]
+[debug] [2023-02-28T09:52:46.057Z] <<< [apiv2][status] GET https://api.github.com/repos/JCBEA/JC 200
+[debug] [2023-02-28T09:52:46.057Z] <<< [apiv2][body] GET https://api.github.com/repos/JCBEA/JC {"id":593988027,"node_id":"R_kgDOI2eJuw","name":"JC","full_name":"JCBEA/JC","private":false,"owner":{"login":"JCBEA","id":111287289,"node_id":"U_kgDOBqIb-Q","avatar_url":"https://avatars.githubusercontent.com/u/111287289?v=4","gravatar_id":"","url":"https://api.github.com/users/JCBEA","html_url":"https://github.com/JCBEA","followers_url":"https://api.github.com/users/JCBEA/followers","following_url":"https://api.github.com/users/JCBEA/following{/other_user}","gists_url":"https://api.github.com/users/JCBEA/gists{/gist_id}","starred_url":"https://api.github.com/users/JCBEA/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/JCBEA/subscriptions","organizations_url":"https://api.github.com/users/JCBEA/orgs","repos_url":"https://api.github.com/users/JCBEA/repos","events_url":"https://api.github.com/users/JCBEA/events{/privacy}","received_events_url":"https://api.github.com/users/JCBEA/received_events","type":"User","site_admin":false},"html_url":"https://github.com/JCBEA/JC","description":null,"fork":false,"url":"https://api.github.com/repos/JCBEA/JC","forks_url":"https://api.github.com/repos/JCBEA/JC/forks","keys_url":"https://api.github.com/repos/JCBEA/JC/keys{/key_id}","collaborators_url":"https://api.github.com/repos/JCBEA/JC/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/JCBEA/JC/teams","hooks_url":"https://api.github.com/repos/JCBEA/JC/hooks","issue_events_url":"https://api.github.com/repos/JCBEA/JC/issues/events{/number}","events_url":"https://api.github.com/repos/JCBEA/JC/events","assignees_url":"https://api.github.com/repos/JCBEA/JC/assignees{/user}","branches_url":"https://api.github.com/repos/JCBEA/JC/branches{/branch}","tags_url":"https://api.github.com/repos/JCBEA/JC/tags","blobs_url":"https://api.github.com/repos/JCBEA/JC/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/JCBEA/JC/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/JCBEA/JC/git/refs{/sha}","trees_url":"https://api.github.com/repos/JCBEA/JC/git/trees{/sha}","statuses_url":"https://api.github.com/repos/JCBEA/JC/statuses/{sha}","languages_url":"https://api.github.com/repos/JCBEA/JC/languages","stargazers_url":"https://api.github.com/repos/JCBEA/JC/stargazers","contributors_url":"https://api.github.com/repos/JCBEA/JC/contributors","subscribers_url":"https://api.github.com/repos/JCBEA/JC/subscribers","subscription_url":"https://api.github.com/repos/JCBEA/JC/subscription","commits_url":"https://api.github.com/repos/JCBEA/JC/commits{/sha}","git_commits_url":"https://api.github.com/repos/JCBEA/JC/git/commits{/sha}","comments_url":"https://api.github.com/repos/JCBEA/JC/comments{/number}","issue_comment_url":"https://api.github.com/repos/JCBEA/JC/issues/comments{/number}","contents_url":"https://api.github.com/repos/JCBEA/JC/contents/{+path}","compare_url":"https://api.github.com/repos/JCBEA/JC/compare/{base}...{head}","merges_url":"https://api.github.com/repos/JCBEA/JC/merges","archive_url":"https://api.github.com/repos/JCBEA/JC/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/JCBEA/JC/downloads","issues_url":"https://api.github.com/repos/JCBEA/JC/issues{/number}","pulls_url":"https://api.github.com/repos/JCBEA/JC/pulls{/number}","milestones_url":"https://api.github.com/repos/JCBEA/JC/milestones{/number}","notifications_url":"https://api.github.com/repos/JCBEA/JC/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/JCBEA/JC/labels{/name}","releases_url":"https://api.github.com/repos/JCBEA/JC/releases{/id}","deployments_url":"https://api.github.com/repos/JCBEA/JC/deployments","created_at":"2023-01-27T10:26:17Z","updated_at":"2023-01-27T12:06:28Z","pushed_at":"2023-02-28T09:42:58Z","git_url":"git://github.com/JCBEA/JC.git","ssh_url":"git@github.com:JCBEA/JC.git","clone_url":"https://github.com/JCBEA/JC.git","svn_url":"https://github.com/JCBEA/JC","homepage":null,"size":514,"stargazers_count":0,"watchers_count":0,"language":"TypeScript","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"}},"network_count":0,"subscribers_count":1}
+[debug] [2023-02-28T09:52:46.059Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts [none]
+[debug] [2023-02-28T09:52:46.060Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts {"accountId":"github-action-593988027","serviceAccount":{"displayName":"GitHub Actions (JCBEA/JC)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository JCBEA/JC"}}
+[debug] [2023-02-28T09:52:47.300Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts 409
+[debug] [2023-02-28T09:52:47.300Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts [omitted]
+[debug] [2023-02-28T09:52:47.303Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com [none]
+[debug] [2023-02-28T09:52:47.308Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:getIamPolicy [none]
+[debug] [2023-02-28T09:52:47.857Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com 200
+[debug] [2023-02-28T09:52:47.857Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com {"name":"projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com","projectId":"newsemsecond","uniqueId":"110773596419403915144","email":"github-action-593988027@newsemsecond.iam.gserviceaccount.com","displayName":"GitHub Actions (JCBEA/JC)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository JCBEA/JC","oauth2ClientId":"110773596419403915144"}
+[debug] [2023-02-28T09:52:48.937Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:getIamPolicy 200
+[debug] [2023-02-28T09:52:48.937Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:getIamPolicy {"version":1,"etag":"BwX1v1krnfk=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-537573845279@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-537573845279@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:jusrinbea@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-537573845279@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]}]}
+[debug] [2023-02-28T09:52:48.938Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:setIamPolicy [none]
+[debug] [2023-02-28T09:52:48.938Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:setIamPolicy {"policy":{"version":1,"etag":"BwX1v1krnfk=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-537573845279@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-537573845279@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:jusrinbea@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-537573845279@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2023-02-28T09:52:50.972Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:setIamPolicy 200
+[debug] [2023-02-28T09:52:50.972Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newsemsecond:setIamPolicy {"version":1,"etag":"BwX1v5AAUd4=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-537573845279@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-537573845279@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-k833f@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:jusrinbea@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-537573845279@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-593988027@newsemsecond.iam.gserviceaccount.com"]}]}
+[debug] [2023-02-28T09:52:50.973Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com/keys [none]
+[debug] [2023-02-28T09:52:50.973Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2023-02-28T09:53:03.405Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com/keys 200
+[debug] [2023-02-28T09:53:03.405Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com/keys {"name":"projects/newsemsecond/serviceAccounts/github-action-593988027@newsemsecond.iam.gserviceaccount.com/keys/df6722d227f04d89948513322ad7448335e8d453","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAibmV3c2Vtc2Vjb25kIiwKICAicHJpdmF0ZV9rZXlfaWQiOiAiZGY2NzIyZDIyN2YwNGQ4OTk0ODUxMzMyMmFkNzQ0ODMzNWU4ZDQ1MyIsCiAgInByaXZhdGVfa2V5IjogIi0tLS0tQkVHSU4gUFJJVkFURSBLRVktLS0tLVxuTUlJRXZnSUJBREFOQmdrcWhraUc5dzBCQVFFRkFBU0NCS2d3Z2dTa0FnRUFBb0lCQVFESHFFNldMNlNZL3ZaeFxuNEJkY0R5VVltMk1rTHJzZktJc1lyMXJtQTBmK2pxb3htemRudTA2MVJGbzBsZEZRc0c3MFh4SjVXZFJrU2NuK1xuN0RubEVkRXF1Z0ltRW9tZVFuTE5NOGtjcjYwRWJsdkZTTTNDTlV0eDBMRGpPRVRwNGNXSGlCald0bEtQOWJXSVxueHQrOTB2QVZUalF0RVM2U3VKU1VIanRzamZOOXI0S2EramJnU2hBZjdVcVg3WE15bnAvNGZUMlBnZmt1aUptRlxuRHB3R2R1OGtSS1ZYb2VwbEJZYU5OYWh1TXlGRmlVOWxMU0FXUkdxYmIyZHJCRzVBUlBRbGJIYVdOKzJxcElyV1xueEJhcnBCb1R6M21pZTU0Vk5NY0tLVXZsOEUrcm1sTmVQbW9rUjR5SE1NTTZnL3NZNEtvQUw2YW5CdktEaG1KYlxuM1JrY0Zia3JBZ01CQUFFQ2dnRUFWa1RSakJCUytTNjFrdGZHa0NjVkd0Qk5ZcjEwYWc2dEo0SGhiMkI4azYvV1xuTnkvL25Ta3daWjkrc0prSmcrbHdUOVBpbWgrbjU1dUFsYzlCWnNxdmk5d3FnSVBqQmNobGJXZ1NYbnhEOEpXMFxudm9acUxaKzBsUjJjeU5rdjRiVUZrajNLcWIvRzVlQS95N1ZPeU9ramhya3ZUMGZNeldYSEFVY2MyeGRzM2VHY1xuQmNIVDlDY1U5Q0NJTy9iQTg2UmVOQjA4MTFWcU1hSlBUb2tpdDNaOTBPVFB6QXUwOHR1cFg4cXhGbkxNYkN6RVxuU0JBYktrcDFHU3BhcDN6anhPLzVyMVlvelZLeEk2YmVheDlobmpFSnFCSmo3NWMrM1RjTE16MWZ4VkZGNWJQNVxuTm5wUmJjb1UrRSs3d1pKZXZBRlVOU0ZyVHJNL3FDYTFFUGVSY3ZWRmpRS0JnUUR2YThFdUM1L2JCTzZvVEtTUlxuT1N2TnV2K05DNjFsVFI1UFlpWncxSERmREhXSlZyUXRqaTQvdyt6cFExSVJYbTNxSlRpZDNDWXNSSFEzWjBHSlxuWnc2djJ1VHFRQm5YK1NIR2ZVNWdTYVZ6a0NRMjVZRk1EbE16VDlNRGpFRnhtdUNSRGhDK0V6WW5Oc2dPSFErRlxuU2xRVjlSd01zWmtQU1FKZ0pIZk5pVFAwYlFLQmdRRFZlNmtIWnd1NzFodDdvem1Ld1F3a2RBbFR2TjQ5MVlYSVxuSllpZFVMa0tobks1Y0NKSTR4eTQ2OHBpNnlWUEVXSHFSV0ZkcjljbGp4OUhPMUtuM1NhL2Rvam5LamU0RHpiRFxub0ZWYTJCZUZsWGs0NlZpZ0RNa0wvbG4yUWZxWXN2QU9YWlNYd2E0WUlPc1JrN09XRGd4R21YbDBmRUxQeUtCcFxuVldHY3JkSDA5d0tCZ1FEY2laVllwTHlMTXUvamR6WGZ6NW5aMS9hdUphT0RQSlkrNlZvZmRKREQ1T1lmckE0c1xuS0Z2UndOZnB4bWxDTm9sb3RRQ0I2TmdBenMxK2UwNlRFcXNrc2ExTFdlQjBZTGdMN2tEVDBRTG1nRS9iZ1d5b1xuY2ttUmFtWWxUbnk1K01BQzNjSHVWQ1A5MnloTVY5aUVId04xZG1Kd0R1ZStmTElEZlpRZGI5Uzd3UUtCZ1FDU1xuWGQ5dEFOeU5vMlZpWm0yOFVWRkc2UHZBR3R6dzNpV0VMUisyWkRNS0lWWWxCOW1weVhUVzRHcjVXU2xTUmFPeFxuWUhJNkxxWSt6UnJ2MXA5OEVlZFFIREFPOWVZUDN2WjROOFJ0clh5ckRPbDQrSnZYMkF3N21kOEtOUUJnazBaOVxuUXZIdS9rNmpvbVlvdmZEQjc4M0ExZGJzNDRsWE5zR3NsbXAvWnJsdHp3S0JnQVQvNU13b1dIU0kxWWtQQmtlclxuZFA3VUdwajJWTFVkMVJoU3FwNk03bUxlMW5uWnNxRk9seWtZeUZMeUEzdlpVVzRXVEZyZDNzRDBybGorSGk4TlxuOVFXck9lM3JZMU11M3ZJOWNYcmNXcGdPVlNlL1dyNUVsZGNkRUdBWUhvSERMNFQ2bVNiNC9wbXA4TjlIMWJFNlxuUUtGWlovanZMNVowMU9uUGhNVXNtRkJIXG4tLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tXG4iLAogICJjbGllbnRfZW1haWwiOiAiZ2l0aHViLWFjdGlvbi01OTM5ODgwMjdAbmV3c2Vtc2Vjb25kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwKICAiY2xpZW50X2lkIjogIjExMDc3MzU5NjQxOTQwMzkxNTE0NCIsCiAgImF1dGhfdXJpIjogImh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi9hdXRoIiwKICAidG9rZW5fdXJpIjogImh0dHBzOi8vb2F1dGgyLmdvb2dsZWFwaXMuY29tL3Rva2VuIiwKICAiYXV0aF9wcm92aWRlcl94NTA5X2NlcnRfdXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92MS9jZXJ0cyIsCiAgImNsaWVudF94NTA5X2NlcnRfdXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL3JvYm90L3YxL21ldGFkYXRhL3g1MDkvZ2l0aHViLWFjdGlvbi01OTM5ODgwMjclNDBuZXdzZW1zZWNvbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iCn0K","validAfterTime":"2023-02-28T09:53:19Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-593988027 with Firebase Hosting admin permissions. 
+[debug] [2023-02-28T09:53:03.413Z] >>> [apiv2][query] PUT https://api.github.com/repos/JCBEA/JC/actions/secrets/FIREBASE_SERVICE_ACCOUNT_NEWSEMSECOND [none]
+[debug] [2023-02-28T09:53:03.414Z] >>> [apiv2][body] PUT https://api.github.com/repos/JCBEA/JC/actions/secrets/FIREBASE_SERVICE_ACCOUNT_NEWSEMSECOND {"encrypted_value":"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","key_id":"568250167242549743"}
+[debug] [2023-02-28T09:53:04.340Z] <<< [apiv2][status] PUT https://api.github.com/repos/JCBEA/JC/actions/secrets/FIREBASE_SERVICE_ACCOUNT_NEWSEMSECOND 204
+[debug] [2023-02-28T09:53:04.341Z] <<< [apiv2][body] PUT https://api.github.com/repos/JCBEA/JC/actions/secrets/FIREBASE_SERVICE_ACCOUNT_NEWSEMSECOND undefined
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_NEWSEMSECOND. 
+[info] i  You can manage your secrets at https://github.com/JCBEA/JC/settings/secrets. 
+[info] 
+[debug] [2023-02-28T11:30:13.213Z] ----------------------------------------------------------------------
+[debug] [2023-02-28T11:30:13.219Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-02-28T11:30:13.220Z] CLI Version:   11.24.0
+[debug] [2023-02-28T11:30:13.220Z] Platform:      win32
+[debug] [2023-02-28T11:30:13.220Z] Node Version:  v16.17.0
+[debug] [2023-02-28T11:30:13.224Z] Time:          Tue Feb 28 2023 19:30:13 GMT+0800 (Taipei Standard Time)
+[debug] [2023-02-28T11:30:13.224Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-28T11:30:13.416Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-28T11:30:13.417Z] > authorizing via signed-in user (jusrinbea@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Angular\Second_sem
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-02-28T11:30:50.532Z] Using project from CLI flag: newsemsecond
+[debug] [2023-02-28T11:30:50.537Z] > refreshing access token with scopes: []
+[debug] [2023-02-28T11:30:50.541Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-28T11:30:50.541Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-28T11:30:51.027Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-02-28T11:30:51.027Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-28T11:30:51.052Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond [none]
+[debug] [2023-02-28T11:30:51.601Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond 200
+[debug] [2023-02-28T11:30:51.602Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond {"projectId":"newsemsecond","projectNumber":"537573845279","displayName":"NewSemSecond","name":"projects/newsemsecond","resources":{"hostingSite":"newsemsecond","realtimeDatabaseInstance":"newsemsecond-default-rtdb"},"state":"ACTIVE","etag":"1_cd9a2e06-af1d-46d7-9bfd-ece5cc97ad3a"}
+[info] i  Using project newsemsecond (NewSemSecond) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-02-28T11:30:55.775Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-02-28T11:30:56.236Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-02-28T11:30:56.237Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.17.1","browserURL":"https://www.gstatic.com/firebasejs/9.17.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.17.1/firebase.tgz"},"live":{"version":"9.17","browserURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.17.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.17.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.17.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.17.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.17.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Angular\Second_sem 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=652927093&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-02-28T11:30:59.619Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-02-28T11:30:59.619Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-02-28T11:31:00.405Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-02-28T11:31:00.405Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-02-28T11:31:00.423Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-02-28T11:31:01.089Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-02-28T11:31:01.089Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"JCBEA","id":111287289,"node_id":"U_kgDOBqIb-Q","avatar_url":"https://avatars.githubusercontent.com/u/111287289?v=4","gravatar_id":"","url":"https://api.github.com/users/JCBEA","html_url":"https://github.com/JCBEA","followers_url":"https://api.github.com/users/JCBEA/followers","following_url":"https://api.github.com/users/JCBEA/following{/other_user}","gists_url":"https://api.github.com/users/JCBEA/gists{/gist_id}","starred_url":"https://api.github.com/users/JCBEA/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/JCBEA/subscriptions","organizations_url":"https://api.github.com/users/JCBEA/orgs","repos_url":"https://api.github.com/users/JCBEA/repos","events_url":"https://api.github.com/users/JCBEA/events{/privacy}","received_events_url":"https://api.github.com/users/JCBEA/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":1,"following":0,"created_at":"2022-08-15T12:29:35Z","updated_at":"2023-01-27T10:25:45Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":415485,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as JCBEA 
+[info] 
+[debug] [2023-02-28T11:31:09.269Z] >>> [apiv2][query] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key type=owner
+[debug] [2023-02-28T11:31:09.794Z] <<< [apiv2][status] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key 404
+[debug] [2023-02-28T11:31:09.794Z] <<< [apiv2][body] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2023-02-28T11:32:28.055Z] ----------------------------------------------------------------------
+[debug] [2023-02-28T11:32:28.058Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-02-28T11:32:28.059Z] CLI Version:   11.24.0
+[debug] [2023-02-28T11:32:28.059Z] Platform:      win32
+[debug] [2023-02-28T11:32:28.059Z] Node Version:  v16.17.0
+[debug] [2023-02-28T11:32:28.061Z] Time:          Tue Feb 28 2023 19:32:28 GMT+0800 (Taipei Standard Time)
+[debug] [2023-02-28T11:32:28.061Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-28T11:32:28.211Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-28T11:32:28.211Z] > authorizing via signed-in user (jusrinbea@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Angular\Second_sem
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-02-28T11:32:29.993Z] Using project from CLI flag: newsemsecond
+[debug] [2023-02-28T11:32:29.999Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond [none]
+[debug] [2023-02-28T11:32:30.678Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond 200
+[debug] [2023-02-28T11:32:30.679Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond {"projectId":"newsemsecond","projectNumber":"537573845279","displayName":"NewSemSecond","name":"projects/newsemsecond","resources":{"hostingSite":"newsemsecond","realtimeDatabaseInstance":"newsemsecond-default-rtdb"},"state":"ACTIVE","etag":"1_cd9a2e06-af1d-46d7-9bfd-ece5cc97ad3a"}
+[info] i  Using project newsemsecond (NewSemSecond) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-02-28T11:32:34.595Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-02-28T11:32:34.889Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-02-28T11:32:34.889Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.17.1","browserURL":"https://www.gstatic.com/firebasejs/9.17.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.17.1/firebase.tgz"},"live":{"version":"9.17","browserURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.17.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.17.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.17.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.17.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.17.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.17.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Angular\Second_sem 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=1052745116&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-02-28T11:32:37.464Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-02-28T11:32:37.464Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-02-28T11:32:38.065Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-02-28T11:32:38.065Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-02-28T11:32:38.075Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-02-28T11:32:38.721Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-02-28T11:32:38.722Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"JCBEA","id":111287289,"node_id":"U_kgDOBqIb-Q","avatar_url":"https://avatars.githubusercontent.com/u/111287289?v=4","gravatar_id":"","url":"https://api.github.com/users/JCBEA","html_url":"https://github.com/JCBEA","followers_url":"https://api.github.com/users/JCBEA/followers","following_url":"https://api.github.com/users/JCBEA/following{/other_user}","gists_url":"https://api.github.com/users/JCBEA/gists{/gist_id}","starred_url":"https://api.github.com/users/JCBEA/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/JCBEA/subscriptions","organizations_url":"https://api.github.com/users/JCBEA/orgs","repos_url":"https://api.github.com/users/JCBEA/repos","events_url":"https://api.github.com/users/JCBEA/events{/privacy}","received_events_url":"https://api.github.com/users/JCBEA/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":1,"following":0,"created_at":"2022-08-15T12:29:35Z","updated_at":"2023-01-27T10:25:45Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":415485,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as JCBEA 
+[info] 
+[debug] [2023-02-28T11:33:05.713Z] >>> [apiv2][query] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key type=owner
+[debug] [2023-02-28T11:33:06.277Z] <<< [apiv2][status] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key 404
+[debug] [2023-02-28T11:33:06.278Z] <<< [apiv2][body] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2023-02-28T11:33:09.722Z] >>> [apiv2][query] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key type=owner
+[debug] [2023-02-28T11:33:09.961Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-02-28T11:33:10.157Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-02-28T11:33:10.218Z] <<< [apiv2][status] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key 404
+[debug] [2023-02-28T11:33:10.218Z] <<< [apiv2][body] GET https://api.github.com/repos/JCBBEA/JC/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2023-02-28T11:33:10.423Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-02-28T11:33:10.424Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-02-28T11:33:10.695Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-02-28T11:33:10.695Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
