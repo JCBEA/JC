@@ -11,12 +11,12 @@
         <div class="row">
             <div class="colm-form">
                 <div class="form-container">
+                    <h1>Admin Login</h1>
                     <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
                         <input type="text" ngModel id="username" name="username" required>
                         <input type="password" ngModel id="password" name="password" required>
                         <input class="btn-login" type="submit" id="saveData" name="Submit" [disabled]="loginForm.invalid" value="Login"/>
-                        <a routerLink="/adminlogin">Admin</a>
-                        <button class="btn-new" routerLink="/Signup">Create new Account</button>
+                        <a routerLink="/Login">Admin</a>
                       </form>
                 </div>
             </div>

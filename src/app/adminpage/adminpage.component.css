@@ -1,0 +1,110 @@
+.bg{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+    height: 100%;
+    width: 100%;
+}
+.body{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    position: absolute;
+    left: 3%;
+    top: 80%;
+    
+ }
+ .post{
+    margin-top: 35%;
+ }
+ 
+ .chat{
+   width: 19%;
+   display: flex;
+   max-width: 1000px;
+   position: absolute;
+   left: 3%;
+   background-color: cornflowerblue;
+   border: 5px solid grey;
+   height: 355px;
+   padding-bottom: 15px;
+ }
+ .p-chat{
+   color: aliceblue;
+ }
+ .p-title-chat{
+   color:white;
+   font-weight:bold;
+ }
+ .p-chat{
+   margin-left: 20%;
+ }
+ .inputs{
+   top: 90%;
+   margin-bottom: 0;
+   position: absolute;
+ }
+ .chatlist{
+   margin-top: 0%;
+
+   height: 345px;
+   width: 350px;
+   overflow-y: auto;
+ }
+ .pepol{
+   border: 1px solid skyblue;
+   margin: 2%;
+   height: 90px;
+ }
+ @media only screen and (max-width: 600px) {
+   .body{
+     width: 100%;
+     height: auto;   
+   }
+   .body{
+     margin-top: 325px;
+   }
+   .chat{
+     width: 90%;
+     height: 360px;  
+   }
+   .inputs{
+     top: 88%;
+   }
+ }
+ 
+ @media only screen and (max-width: 800px) {
+   .body{
+     width: 100%;
+     height: auto;   
+   }
+   .body{
+     margin-top: 325px;
+   }
+   .chat{
+     width: 90%;
+     height: 385px;  
+   }
+   .inputs{
+     top: 81%;
+   }
+ }
+ .card{
+     border: 1px solid skyblue;
+     margin: 2%;
+     height: 90px;
+    
+ }
+ .over{
+     background-color: cornflowerblue;
+   height: 400px;
+   width: 350px;
+   padding: 20px;
+   border: 5px solid grey;
+   overflow-y: auto;
+ }
+ button{
+   float: right;
+ }
+ 

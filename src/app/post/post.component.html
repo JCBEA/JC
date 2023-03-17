@@ -1,0 +1,26 @@
+<body>
+    <div class="inputBox">
+        <form class="post" #post="ngForm" (ngSubmit)="posts(post.value)">
+            <select ngModel id="username" name="username" id="username">
+             <option *ngFor="let item of users | async" value="{{item.username}}">{{item.username}}</option>
+            </select>
+           <textarea class="ichat" style="height: 40px; width: 225px;" type="text" ngModel id="post" placeholder="Message" name="post" required></textarea>
+           <input class="btn-new" type="submit" id="saveData" name="Submit" [disabled]="post.invalid" value="Post"/>
+           
+           </form>
+
+
+    </div>
+<div *ngFor="let newpost of userPost | async ">
+<div *ngIf="newpost">
+<div class="container">
+  <p>{{newpost.username}}</p>
+  <p>{{newpost.post}}</p>
+
+</div>
+</div>
+</div>
+
+
+
+</body>

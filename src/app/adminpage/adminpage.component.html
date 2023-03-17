@@ -1,0 +1,45 @@
+<a style="float: right; margin-right: 20px;" routerLink="/Login">Logout</a>
+<br>
+<h1>Hi Admin</h1>
+<br>
+<hr >
+
+<h1>CHAT</h1>
+<div class="chat"> 
+  <div class="chatlist">
+    
+      <div *ngFor="let peeps of userchat | async">
+        <div class="pepol">
+        <p class="p-title-chat">{{peeps.username}}</p> 
+        <p class="p-chat">{{peeps.chat}}</p> 
+        <button (click)="deleteChat(peeps.id)">Delete</button>
+        </div>
+       
+    </div>
+
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1>USERS</h1>
+
+<div class="body">
+    
+    <div   class="cards-list over">
+        <div *ngFor="let peps of users | async">
+            <div *ngIf= "peps">
+                <div class="card 1">
+                    <div class="card_title title-white">
+                      <p class="p-title">Username: {{peps.username}}</p>  
+                      <p>Password: {{peps.password}}</p>
+                      <button (click)="del(peps.username)">Delete</button>
+                    </div>
+                  </div>
+                </div>  
+
+        </div>
+    </div>
+    </div>
+<div class="post">
+    <h1>POST</h1>
+    <app-post></app-post>
+</div>

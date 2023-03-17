@@ -13,14 +13,14 @@ interface Item {
   password: string;
 }
 
-
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  selector: 'app-adminpage',
+  templateUrl: './adminpage.component.html',
+  styleUrls: ['./adminpage.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class AdminpageComponent implements OnInit {
 
+ 
   users!: Observable<any[]>;
   userchat: Observable<any[]>;
   constructor(public database: Database, private db: AngularFireDatabase, private firebase: AngularFireDatabase) {
@@ -56,17 +56,6 @@ export class HomepageComponent implements OnInit {
 
 
 
-
-   update(value:any){
- 
-    update(ref(this.database, 'users/' + value.username), {
-       password: value.password
-     }); 
-    alert('User updated!');
-      
-  }
-
-
   username = '';
   fillForm(username: any) {
     this.username = username;
@@ -92,16 +81,7 @@ export class HomepageComponent implements OnInit {
         password: value.password
       }); 
     });
-  }
 
- 
+}
 
-
-
-
-  }
-
-
-
-
-
+}

@@ -1,16 +1,44 @@
-<button routerLink="/Login">Logout</button>
-
-<br>
+<app-navbar></app-navbar>
+<br><br><br><br>
 <div>
 
   <h1>Enter username to change password</h1>
 <form #RegisterForm="ngForm" (ngSubmit)="update(RegisterForm.value)">
-  <input type="text" ngModel id="username" [(ngModel)]="username" placeholder="Username you want to change the pass" name="username">
-  <input type="password" ngModel id="password" placeholder="New password" name="password">
-  <input class="btn-new" type="submit" id="saveData" name="Submit" value="Update password"/>
+  <input type="text" ngModel id="username" [(ngModel)]="username" placeholder="Username you want to change the pass" name="username" required>
+  <input type="password" ngModel id="password" placeholder="New password" name="password" required>
+  <input class="btn-new" type="submit" id="saveData" name="Submit" [disabled]="RegisterForm.invalid" value="Update password"/>
 </form>
 </div>
 <br>
+
+
+
+<div class="chat"> 
+  <div class="chatlist">
+    
+      <div *ngFor="let peeps of userchat | async">
+        <div class="pepol">
+        <p class="p-title-chat">{{peeps.username}}</p> 
+        <p class="p-chat">{{peeps.chat}}</p> 
+        <button (click)="deleteChat(peeps.id)">Delete</button>
+        </div>
+       
+    </div>
+
+    </div>
+    <form class="inputs" #chat="ngForm" (ngSubmit)="chats(chat.value)">
+      <select ngModel id="username" name="username" id="username">
+       <option *ngFor="let item of users | async" value="{{item.username}}">{{item.username}}</option>
+      </select>
+     <input class="ichat" style="height: 40px; width: 225px;" type="text" ngModel id="chat" placeholder="Message" name="chat" required>
+     <input class="btn-new" type="submit" id="saveData" name="Submit" [disabled]="chat.invalid" value="Send"/>
+     
+     </form>
+</div>
+
+
+
+
 <div class="body">
     <div   class="cards-list over">
         <div *ngFor="let peps of users | async">

@@ -16,6 +16,13 @@ main {
     position: relative;
     margin: 0 auto;
 }
+main{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+    height: 100%;
+    width: 100%;
+}
 
 footer {
     height: 10vh;

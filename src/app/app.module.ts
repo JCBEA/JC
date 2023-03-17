@@ -14,6 +14,9 @@ import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { PostComponent } from './post/post.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     LoginComponent,
     HomepageComponent,
     SignupComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostComponent,
+    AdminpageComponent,
+    AdminloginComponent
   ],
   imports: [
     FormsModule,
