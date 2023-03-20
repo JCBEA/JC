@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Database, set, ref, onValue } from '@angular/fire/database';
 
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -21,7 +21,10 @@ set(ref(this.database, 'users/' + value.username), {
     username: value.username,
      password: value.password
    }); 
-   alert('User created!');
+   Swal.fire({
+    icon: 'success',
+    title: 'Signup Successfuly',
+  })
   }
 }
 }

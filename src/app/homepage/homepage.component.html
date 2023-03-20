@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+<div class="background">
 <br><br><br><br>
 <div>
 
@@ -13,42 +14,20 @@
 
 
 
-<div class="chat"> 
-  <div class="chatlist">
-    
-      <div *ngFor="let peeps of userchat | async">
-        <div class="pepol">
-        <p class="p-title-chat">{{peeps.username}}</p> 
-        <p class="p-chat">{{peeps.chat}}</p> 
-        <button (click)="deleteChat(peeps.id)">Delete</button>
-        </div>
-       
-    </div>
-
-    </div>
-    <form class="inputs" #chat="ngForm" (ngSubmit)="chats(chat.value)">
-      <select ngModel id="username" name="username" id="username">
-       <option *ngFor="let item of users | async" value="{{item.username}}">{{item.username}}</option>
-      </select>
-     <input class="ichat" style="height: 40px; width: 225px;" type="text" ngModel id="chat" placeholder="Message" name="chat" required>
-     <input class="btn-new" type="submit" id="saveData" name="Submit" [disabled]="chat.invalid" value="Send"/>
-     
-     </form>
-</div>
-
-
-
-
+<div *ngIf="getSession == getSession">
 <div class="body">
     <div   class="cards-list over">
         <div *ngFor="let peps of users | async">
             <div *ngIf= "peps">
                 <div class="card 1">
                     <div class="card_title title-white">
-                      <p class="p-title">Username: {{peps.username}}</p>  
-                      <p>Password: {{peps.password}}</p>
-                      <button (click)="del(peps.username)">Delete</button>
-                      <button (click)="fillForm(peps.username)">update</button>
+                      <p *ngIf="getSession==peps.username" class="p-title">Username: {{peps.username}}</p>
+                      <p *ngIf="getSession=='admin'" class="p-title">Username: {{peps.username}}</p>  
+                      <p *ngIf="getSession=='admin'">Password: {{peps.password}}</p>
+                      <p *ngIf="getSession==peps.username">Password: {{peps.password}}</p>
+                      <button *ngIf="getSession==peps.username" (click)="del(peps.username)">Delete</button>
+                      <button *ngIf="getSession=='admin'" (click)="del(peps.username)">Delete</button>
+                      <button *ngIf="getSession=='admin'" (click)="fillForm(peps.username)">update</button>
                     </div>
                   </div>
                 </div>  
@@ -56,3 +35,29 @@
         </div>
     </div>
     </div>
+  
+
+
+  <div class="chat"> 
+  <div class="chatlist">
+    
+      <div *ngFor="let peeps of userchat | async">
+        <div class="pepol">
+        <p class="p-title-chat">{{peeps.username}}</p> 
+        <p class="p-chat">{{peeps.chat}}</p> 
+        <button *ngIf="getSession==peeps.username" (click)="deleteChat(peeps.id)">Delete</button>
+        <button *ngIf="getSession=='admin'" (click)="deleteChat(peeps.id)">Delete</button>
+        </div>
+       
+    </div>
+
+    </div>
+    <form class="inputs" #chat="ngForm" (ngSubmit)="chats(chat.value)">
+      <input type="radio" ngModel id="username" [(ngModel)]="selectedValue" name="username" id="username" value="{{getSession}}" required>
+     <input class="ichat" style="height: 40px; width: 225px;" type="text" ngModel id="chat" placeholder="Message" name="chat" required>
+     <input class="btn-new" type="submit" id="saveData" name="Submit" [disabled]="chat.invalid" value="Send"/>
+     
+     </form>
+</div>
+</div>
+</div>

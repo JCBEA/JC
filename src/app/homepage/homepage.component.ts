@@ -20,19 +20,18 @@ interface Item {
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
   users!: Observable<any[]>;
   userchat: Observable<any[]>;
+  getSession!: null | string;
+  selectedValue: any = this.getSession;
   constructor(public database: Database, private db: AngularFireDatabase, private firebase: AngularFireDatabase) {
     this.users = db.list('/users').valueChanges();
     this.userchat = this.db.list('/userchats', ref => ref.orderByChild('uid')).valueChanges();
+    this.getSession = sessionStorage.getItem('id');
    }
-   
   ngOnInit(): void {
 
-
   }
-
   
   del(value: any){
     remove(ref(this.database, 'users/' + value));
@@ -42,6 +41,10 @@ export class HomepageComponent implements OnInit {
 
   deleteChat(id: any) {
     remove(ref(this.database, 'userchats/' + id));
+    Swal.fire({
+      icon: 'error',
+      title: 'Deleted',
+    })
   }
   chats(payload:any) {
     
@@ -61,8 +64,13 @@ export class HomepageComponent implements OnInit {
  
     update(ref(this.database, 'users/' + value.username), {
        password: value.password
+
+       
      }); 
-    alert('User updated!');
+     Swal.fire({
+      icon: 'success',
+      title: 'Updated Successfuly',
+    })
       
   }
 
@@ -77,22 +85,6 @@ export class HomepageComponent implements OnInit {
   password: any;
   itemId: any;
 
-  // Trigger the SweetAlert2 modal on button click
-  change(value:any) {
-    Swal.fire({
-      title: 'Update Password',
-      html: `<form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
-      <input type="password" ngModel id="password" name="password">
-      <input class="btn-new" type="submit" id="saveData" name="Submit" value="Update Password"/>
-  </form>`,
-      showCancelButton: true,
-      confirmButtonText: 'Update'
-    }).then((result) => {
-      update(ref(this.database, 'users/' + value), {
-        password: value.password
-      }); 
-    });
-  }
 
  
 

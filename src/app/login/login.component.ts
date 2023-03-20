@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Database,ref,set, onValue } from '@angular/fire/database';
 import { Router } from '@angular/router';
 
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,10 +23,15 @@ export class LoginComponent implements OnInit {
 
     if (data.password == value.password){
     this.route.navigate(['/Home'])
+    sessionStorage.setItem('id', data.username);
+    Swal.fire({
+      icon: 'success',
+      title: 'Successfuly Login',
+    })
     }else{
      alert('Wrong Username or Password');
     }
-    }); 
+    });
     
    
   }
