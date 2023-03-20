@@ -21,13 +21,18 @@
             <div *ngIf= "peps">
                 <div class="card 1">
                     <div class="card_title title-white">
+                       <div *ngIf="getSession!='admin'">
                       <p *ngIf="getSession==peps.username" class="p-title">Username: {{peps.username}}</p>
-                      <p *ngIf="getSession=='admin'" class="p-title">Username: {{peps.username}}</p>  
-                      <p *ngIf="getSession=='admin'">Password: {{peps.password}}</p>
                       <p *ngIf="getSession==peps.username">Password: {{peps.password}}</p>
                       <button *ngIf="getSession==peps.username" (click)="del(peps.username)">Delete</button>
+                      <button *ngIf="getSession==peps.username" (click)="fillForm(peps.username)">update</button>
+                    </div>
+                      <div *ngIf="getSession=='admin'">
+                      <p *ngIf="getSession=='admin'" class="p-title">Username: {{peps.username}}</p>  
+                      <p *ngIf="getSession=='admin'">Password: {{peps.password}}</p>
                       <button *ngIf="getSession=='admin'" (click)="del(peps.username)">Delete</button>
                       <button *ngIf="getSession=='admin'" (click)="fillForm(peps.username)">update</button>
+                    </div>
                     </div>
                   </div>
                 </div>  
