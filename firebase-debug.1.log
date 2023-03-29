@@ -1,0 +1,93 @@
+[debug] [2023-03-29T15:15:18.800Z] ----------------------------------------------------------------------
+[debug] [2023-03-29T15:15:18.804Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-29T15:15:18.805Z] CLI Version:   11.25.2
+[debug] [2023-03-29T15:15:18.806Z] Platform:      win32
+[debug] [2023-03-29T15:15:18.806Z] Node Version:  v16.17.0
+[debug] [2023-03-29T15:15:18.809Z] Time:          Wed Mar 29 2023 23:15:18 GMT+0800 (Taipei Standard Time)
+[debug] [2023-03-29T15:15:18.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-29T15:15:19.038Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-29T15:15:19.040Z] > authorizing via signed-in user (jusrinbea@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Angular\Second_sem
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-03-29T15:16:25.760Z] Using project from CLI flag: newsemsecond
+[debug] [2023-03-29T15:16:25.768Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond [none]
+[debug] [2023-03-29T15:16:26.289Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond 200
+[debug] [2023-03-29T15:16:26.291Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newsemsecond {"projectId":"newsemsecond","projectNumber":"537573845279","displayName":"NewSemSecond","name":"projects/newsemsecond","resources":{"hostingSite":"newsemsecond","realtimeDatabaseInstance":"newsemsecond-default-rtdb"},"state":"ACTIVE","etag":"1_7a82c256-0a84-4881-b795-7e298c69ebb8"}
+[info] i  Using project newsemsecond (NewSemSecond) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-03-29T15:16:26.330Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-03-29T15:16:26.331Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/newsemsecond
+[debug] [2023-03-29T15:16:27.717Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com 200
+[debug] [2023-03-29T15:16:27.717Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/newsemsecond/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-03-29T15:16:27.721Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/newsemsecond/locations/-/instances/newsemsecond-default-rtdb [none]
+[debug] [2023-03-29T15:16:28.163Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/newsemsecond/locations/-/instances/newsemsecond-default-rtdb 200
+[debug] [2023-03-29T15:16:28.164Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/newsemsecond/locations/-/instances/newsemsecond-default-rtdb {"name":"projects/537573845279/locations/us-central1/instances/newsemsecond-default-rtdb","project":"projects/537573845279","databaseUrl":"https://newsemsecond-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-03-29T15:16:52.662Z] >>> [apiv2][query] GET https://newsemsecond-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2023-03-29T15:16:53.216Z] <<< [apiv2][status] GET https://newsemsecond-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-03-29T15:16:53.217Z] <<< [apiv2][body] GET https://newsemsecond-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for newsemsecond-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-03-29T15:17:28.955Z] ----------------------------------------------------------------------
+[debug] [2023-03-29T15:17:28.959Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-29T15:17:28.960Z] CLI Version:   11.25.2
+[debug] [2023-03-29T15:17:28.960Z] Platform:      win32
+[debug] [2023-03-29T15:17:28.960Z] Node Version:  v16.17.0
+[debug] [2023-03-29T15:17:28.962Z] Time:          Wed Mar 29 2023 23:17:28 GMT+0800 (Taipei Standard Time)
+[debug] [2023-03-29T15:17:28.963Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-29T15:17:29.203Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-29T15:17:29.204Z] > authorizing via signed-in user (jusrinbea@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Angular\Second_sem
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
