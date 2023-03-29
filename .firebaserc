@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "default": "newsem-2c305",
+    "newsem": "newsem-2c305"
+  },
   "targets": {
     "secondsem-fd19a": {
       "hosting": {
@@ -22,7 +26,5 @@
       }
     }
   },
-  "projects": {
-    "default": "newsem-2c305"
-  }
+  "etags": {}
 }
