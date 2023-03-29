@@ -7,10 +7,10 @@
         ]
       }
     },
-    "newsemsecond": {
+    "newsem": {
       "hosting": {
         "Second_sem": [
-          "newsemsecond"
+          "newsem"
         ]
       }
     },
@@ -23,6 +23,6 @@
     }
   },
   "projects": {
-    "default": "newsem-2c305"
+    "default": "newsem"
   }
 }
