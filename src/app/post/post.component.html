@@ -1,4 +1,6 @@
+<app-navbar></app-navbar><br><br>
 <body>
+
     <div class="inputBox">
         <form class="post" #post="ngForm" (ngSubmit)="posts(post.value)">
            <textarea class="ichat" style="height: 40px; width: 225px;" type="text" ngModel id="post" placeholder="Message" name="post" required></textarea>
