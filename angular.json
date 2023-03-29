@@ -102,8 +102,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "Second_sem:build:production",
-            "firebaseProject": "newsemsecond",
-            "firebaseHostingSite": "newsemsecond"
+            "firebaseProject": "newsem-2c305",
+            "firebaseHostingSite": "newsem-2c305"
           }
         }
       }
