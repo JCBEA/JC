@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "newsem-2c305"
+    "default": "newsem-2c305",
+    "newsem": "newsem-2c305"
   },
   "targets": {
     "secondsem-fd19a": {
