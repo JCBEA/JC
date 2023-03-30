@@ -21,6 +21,7 @@
     "@angular/router": "^14.1.0",
     "@sweetalert2/ngx-sweetalert2": "^12.1.0",
     "firebase": "^9.18.0",
+    "package-name": "^0.1.0",
     "rxfire": "^6.0.3",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.7.3",
