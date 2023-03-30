@@ -1,10 +1,16 @@
 {
   "hosting": {
-    "public": "dist\\second-sem",
+    "public": "dist/second-sem",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   },
   "database": {
